@@ -30,16 +30,15 @@ export async function getStaticProps({params}) {
     content_type: 'blogPost',
     'fields.slug': params.slug
   })
-  console.log(items);
   return {
     props: {
-      post: items[0]
+      post: items[0],
+      revalidate: 10
     }
   }
 }
 export default function BlogPost({post}) {
   const {heroImage, title, body} = post.fields
-  console.log(post)
   return (
     <div>
       <div className="banner">
