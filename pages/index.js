@@ -15,11 +15,12 @@ export default function Home({ posts }) {
       </Head>
 
       <main>
-        <Header />
+        <Header title="Hi Chris" />
         <div className="posts">
-          {posts.map((p) => {
-            return <Post key={p.date} date={p.date} image={p.image.fields} title={p.title} />
-          })}
+         {posts.map((p) => {
+           // return <Post title={p.title} />
+           return <Post key={p.publishDate} date={p.publishDate} title={p.title} image={p.heroImage} />
+         })}
         </div>
       </main>
 
