@@ -15,17 +15,16 @@ export default function Home({ posts }) {
       </Head>
 
       <main>
-        <Header title="Hi Chris" />
+        <Header title="Lars' Blog and such" />
         <div className="posts">
          {posts.map((p) => {
-           // return <Post title={p.title} />
-           return <Post key={p.publishDate} date={p.publishDate} title={p.title} image={p.heroImage} />
+           return <Post key={p.publishDate} date={p.publishDate} title={p.title} image={p.heroImage} slug={p.slug} />
          })}
         </div>
       </main>
 
       <Footer />
-
+      {/*
       <style jsx>{`
         .container {
           height: 100vh;
@@ -59,6 +58,7 @@ export default function Home({ posts }) {
           box-sizing: border-box;
         }
       `}</style>
+      */}
     </div>
   )
 }
