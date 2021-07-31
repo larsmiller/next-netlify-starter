@@ -1,0 +1,14 @@
+.navbar {
+  background: #333;
+}
+.navbar a {
+  display: inline-block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+.navbar a:hover {
+  opacity: 0.9;
+}

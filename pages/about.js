@@ -8,15 +8,14 @@ export default function Home({ posts }) {
   return (
     <div>
       <Head>
-        <title>Next + Contentful Starter</title>
+        <title>About Everything</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="og:description" value="This is about stuff" />
       </Head>
+
       <div className="container">
-        <div className="posts">
-         {posts.map((p) => {
-           return <Post key={p.slug} date={p.publishDate} title={p.title} image={p.heroImage} slug={p.slug} />
-         })}
-        </div>
+        <h1>About</h1>
+        <h2>It started long ago</h2>
       </div>
 
       {/*

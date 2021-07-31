@@ -11,7 +11,7 @@ export default function NotFound() {
     }, 4000);
   },[])
   return (
-    <div className="not-found">
+    <div className="container">
       <h1>404</h1>
       <h2>Oooops! That page cannot be found :(</h2>
       <p>Redirecting to the <Link href="/">Homepage</Link>...</p>

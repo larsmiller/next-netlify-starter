@@ -1,0 +1,21 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+}
+.post {
+  margin: 2rem auto;
+  max-width: 400px;
+  flex: 0 0 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: -20px 20px 20px 0px rgba(0,0,0,0.25);
+}
+.thumbnail {
+  display: block;
+}
+.content {
+  padding: 2rem;
+}
+.bottomMarginZero {
+  margin-bottom: 0;
+}

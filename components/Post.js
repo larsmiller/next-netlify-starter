@@ -1,3 +1,4 @@
+import styles from '@styles/Post.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -5,15 +6,13 @@ function Post({ date, image, title, slug}) {
   let { file, description } = image.fields
 
   return (
-    <div className="post">
-      <Image src={`https:${file.url}`} alt={description} width={file.details.image.width} height={file.details.image.height} />
-      <div className="description">{description}</div>
-      <div className="text">
+    <div className={styles.post}>
+      <Image src={`https:${file.url}`} className={styles.thumbnail} alt={description} width={file.details.image.width} height={file.details.image.height} />
+      <div className={styles.content}>
         <h2>{title}</h2>
         <h3>{date.substring(0, 10)}</h3>
-        <div className="actions">
-        <Link href={'/blog/' + slug}><a>View Post</a></Link>
-        </div>
+        <p className={styles.description}>{description}</p>
+        <Link href={'/blog/' + slug}><a className="btn">View Post</a></Link>
       </div>
     </div>
   )

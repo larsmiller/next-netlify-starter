@@ -49,7 +49,7 @@ export default function BlogPost({post}) {
 
   const {heroImage, title, body} = post.fields
   return (
-    <div>
+    <div className="container">
       <div className="banner">
         <Image src={`https:${heroImage.fields.file.url}`} alt={heroImage.fields.description} width={heroImage.fields.file.details.image.width} height={heroImage.fields.file.details.image.height} />
       </div>
