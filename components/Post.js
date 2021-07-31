@@ -6,7 +6,6 @@ function Post({ date, image, title, slug}) {
 
   return (
     <div className="post">
-      {console.log(image)}
       <Image src={`https:${file.url}`} alt={description} width={file.details.image.width} height={file.details.image.height} />
       <div className="description">{description}</div>
       <div className="text">

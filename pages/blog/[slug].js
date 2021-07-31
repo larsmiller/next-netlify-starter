@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Skeleton from '@components/Skeleton'
 
 const space = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID
 const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
@@ -21,7 +22,7 @@ export const getStaticPaths = async () => {
   })
   return {
     paths: paths,
-    fallback: false
+    fallback: true
   }
 }
 
@@ -30,6 +31,11 @@ export async function getStaticProps({params}) {
     content_type: 'blogPost',
     'fields.slug': params.slug
   })
+  if (!items.length) {
+    return {
+      notFound: true
+    }
+  }
   return {
     props: {
       post: items[0],
@@ -38,6 +44,9 @@ export async function getStaticProps({params}) {
   }
 }
 export default function BlogPost({post}) {
+
+  if (!post) return <Skeleton />
+
   const {heroImage, title, body} = post.fields
   return (
     <div>
