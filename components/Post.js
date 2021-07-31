@@ -7,12 +7,12 @@ function Post({ date, image, title, slug}) {
 
   return (
     <div className={styles.post}>
-      <Image src={`https:${file.url}`} className={styles.thumbnail} alt={description} width={file.details.image.width} height={file.details.image.height} />
+      <Image src={`https:${file.url}`} className={styles.thumbnail} alt={description} width={file.details.image.width/6} height={file.details.image.height/6} />
       <div className={styles.content}>
         <h2>{title}</h2>
         <h3>{date.substring(0, 10)}</h3>
         <p className={styles.description}>{description}</p>
-        <Link href={'/blog/' + slug}><a className="btn">View Post</a></Link>
+        <Link href={'/blog/' + slug}><a className={styles.bottomMarginZero+' btn'}>View Post</a></Link>
       </div>
     </div>
   )

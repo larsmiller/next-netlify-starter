@@ -8,10 +8,12 @@
   flex: 0 0 100%;
   overflow: hidden;
   border-radius: 0.5rem;
+  background: #f1f1f1;
   box-shadow: -20px 20px 20px 0px rgba(0,0,0,0.25);
 }
 .thumbnail {
   display: block;
+  width: 100%;
 }
 .content {
   padding: 2rem;
